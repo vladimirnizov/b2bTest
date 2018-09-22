@@ -1,0 +1,49 @@
+
+<div class="container" >
+    <div class="row">
+        <div class="thumbnail caption">
+            <a href="#" (click)="showDetail()" matTooltip="Show details">
+          <mat-toolbar color="primary">
+           <mat-toolbar-row >
+            <span>{{currentMovie.Title}}</span>
+            <span class="spacer"></span>
+            <span class="show">{{currentMovie.Year}}</span>
+            <span class="spacer"></span>
+            <span class="show">{{currentMovie.Genre}}</span>
+           </mat-toolbar-row>
+          </mat-toolbar>
+          </a>
+          <mat-card class="example-card" *ngIf="detail">
+          <mat-card-header class="col-md-7">
+           <mat-card-title><h4>{{currentMovie.Plot}}</h4></mat-card-title>
+           <mat-card-subtitle>Rated: {{currentMovie.Rated}}</mat-card-subtitle>
+           <mat-card-subtitle>Released: {{currentMovie.Released}}</mat-card-subtitle>
+           <mat-card-subtitle>Runtime: {{currentMovie.Runtime}}</mat-card-subtitle>
+           <mat-card-subtitle>Director: {{currentMovie.Director}}</mat-card-subtitle>
+           <mat-card-subtitle>Writer: {{currentMovie.Writer}}</mat-card-subtitle>
+           <mat-card-subtitle>Actors: {{currentMovie.Actors}}</mat-card-subtitle>
+           <mat-card-subtitle>Language: {{currentMovie.Language}}</mat-card-subtitle>
+           <mat-card-subtitle>Country: {{currentMovie.Country}}</mat-card-subtitle>
+           <mat-card-subtitle>Awards: {{currentMovie.Awards}}</mat-card-subtitle>
+           <mat-card-subtitle>Metascore: {{currentMovie.Metascore}}</mat-card-subtitle>
+           <mat-card-subtitle>imdbRating: {{currentMovie.imdbRating}}</mat-card-subtitle>
+           <mat-card-subtitle>imdbVotes: {{currentMovie.imdbVotes}}</mat-card-subtitle>
+           <mat-card-subtitle>imdbID: {{currentMovie.imdbID}}</mat-card-subtitle>
+           <mat-card-subtitle>Type: {{currentMovie.Type}}</mat-card-subtitle>
+           <mat-card-subtitle>DVD: {{currentMovie.DVD}}</mat-card-subtitle>
+           <mat-card-subtitle>BoxOffice: {{currentMovie.BoxOffice}}</mat-card-subtitle>
+           <mat-card-subtitle>Production: {{currentMovie.Production}}</mat-card-subtitle>
+           <mat-card-subtitle>Website: <a href="{{currentMovie.Website}}">{{currentMovie.Website}}</a></mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image src="{{currentMovie.Poster}}" alt="Photo"> 
+
+          <mat-card-actions *ngIf="ind!=null">
+            <i class="material-icons" (click)="delete()" matTooltip="Delete">delete</i>
+          </mat-card-actions>
+          </mat-card>
+       </div>
+    </div>
+
+</div>
+
+   
